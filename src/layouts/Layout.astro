@@ -1,0 +1,52 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta
+      name="description"
+      content="Uncle Quil's commission prices and information!!! Here you can find commission prices, details and information about specific types of drawings!"
+    />
+    <meta name="theme-color" content="#283149" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Matej Ruzic" />
+    <link rel="canonical" href={Astro.url} />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style>
+  :root {
+		--color-bg: hsl(224, 29%, 22%);
+		--color-bg-secondary: hsl(224, 24%, 33%);
+		--color-secondary: hsl(184, 100%, 27%);
+		--color-text: hsl(195, 50%, 91%);
+	}
+
+	body {
+    font-family: 'Caveat', cursive;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #000000, #080406, #0e080f, #100d15, #10121b, #111620, #101924, #0f1d29, #11202f, #142435, #17273b, #1b2a41);
+  }
+
+  *, img {
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+</style>

@@ -1,0 +1,24 @@
+---
+import IndexLayout from '@layouts/IndexLayout.astro';
+import { Container, HeroTitle, SiteSections, SocialMedias, UncleQuil }  from '@components';
+---
+
+<IndexLayout title="Welcome to Astro.">
+	<HeroTitle />
+
+	<Container
+		flexDirection="row"
+		maxWidth={64}
+		changeDirection
+		breakpoint={768}
+		client:load
+	>
+		<UncleQuil />
+
+		<Container flexDirection="column" width={32} margin="0 5%">
+			<SiteSections />
+			<SocialMedias />
+		</Container>
+	</Container>
+</IndexLayout>
+ 
