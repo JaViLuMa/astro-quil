@@ -1,4 +1,5 @@
 import solidJs from '@astrojs/solid-js';
+import tailwind from '@astrojs/tailwind';
 import critters from 'astro-critters';
 import fonts from 'astro-fonts-next';
 import { defineConfig } from 'astro/config';
@@ -11,5 +12,6 @@ export default defineConfig({
       url: 'https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap',
     }),
     critters(),
+    tailwind(),
   ],
 });

@@ -8,7 +8,7 @@ const heroTitle = await fetchData<IHeroTitle>('/api/hero-title');
 
 const HeroTitle = () => {
   return (
-    <div class="hero-title__container">
+    <div class="flex justify-center items-center mb-16">
       <img
         class="hero-title__image"
         src={sparkLeft}
