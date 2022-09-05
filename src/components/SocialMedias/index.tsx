@@ -1,24 +1,21 @@
 import '@styles/socialMedias.css';
-import fetchData from '@utils/fetchData';
+import supabaseData from '@utils/supabaseData';
 import { For, Show } from 'solid-js';
 
 import SocialMediaIcon from '../SocialMediaIcon';
 
-const socialMedias = await fetchData<ISocialMedias>(
-  '/api/social-medias?populate=*'
-);
+const data = await supabaseData<Array<ISocialMedias>>('SocialMedias', '*');
 
-// TODO: Fix Render Bug
 const SocialMedias = () => (
   <div class="social-medias__container">
-    <For each={socialMedias?.data} fallback={[]}>
-      {(socialMedia: ISocialMedia) => (
-        <Show when={socialMedia?.attributes?.ShowSocialMedia} fallback={null}>
+    <For each={data} fallback={[]}>
+      {(socialMedia) => (
+        <Show when={socialMedia.ShowSocialMedia} fallback={null}>
           <SocialMediaIcon
-            href={socialMedia.attributes.Link}
-            src={socialMedia.attributes.SocialMediaLogo.data.attributes.url}
-            title={socialMedia.attributes.Title}
-            alt={socialMedia.attributes.Alt}
+            href={socialMedia.Link}
+            src={socialMedia.Source}
+            title={socialMedia.Title}
+            alt={socialMedia.Alt}
           />
         </Show>
       )}

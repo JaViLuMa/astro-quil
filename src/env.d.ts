@@ -1,14 +1,12 @@
 /// <reference types="astro/client" />
 
+type HeroImageProps = {
+  title: string;
+  src: string;
+};
+
 interface IHeroTitle {
-  data: {
-    id: number;
-    attributes: {
-      Title: string;
-      locale: string;
-    };
-  };
-  meta: {};
+  Title: string;
 }
 
 type SocialMediaIconProps = {
@@ -18,39 +16,12 @@ type SocialMediaIconProps = {
   href: string;
 };
 
-interface ISocialMedia {
-  id: number;
-  attributes: {
-    Title: string;
-    Link: string;
-    Alt: string;
-    ShowSocialMedia: boolean;
-    SocialMediaLogo: {
-      data: {
-        id: number;
-        attributes: {
-          name: string;
-          alternativeText: string;
-          caption: string;
-          width: number;
-          height: number;
-          url: string;
-        };
-      };
-    };
-  };
-}
-
 interface ISocialMedias {
-  data: [ISocialMedia];
-  meta: {
-    pagination: {
-      page: number;
-      pageSize: number;
-      pageCount: number;
-      total: number;
-    };
-  };
+  ShowSocialMedia: boolean;
+  Title: string;
+  Alt: string;
+  Source: string;
+  Link: string;
 }
 
 type Container = {
