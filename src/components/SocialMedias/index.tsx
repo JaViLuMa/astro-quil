@@ -6,7 +6,7 @@ import SocialMediaIcon from '../SocialMediaIcon';
 const data = await supabaseData<Array<ISocialMedias>>('SocialMedias', '*');
 
 const SocialMedias = () => (
-  <div class="flex justify-evenly h-12">
+  <div class="flex justify-evenly h-12 mb-8">
     <For each={data} fallback={[]}>
       {(socialMedia) => (
         <Show when={socialMedia.ShowSocialMedia} fallback={null}>

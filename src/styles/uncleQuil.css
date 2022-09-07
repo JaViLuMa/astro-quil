@@ -54,6 +54,7 @@
   100% {
     margin-top: 0;
     animation-timing-function: ease-out;
+    position: static;
   }
 }
 

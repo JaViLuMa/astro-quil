@@ -3,9 +3,9 @@ import '@styles/uncleQuil.css';
 import quil from '/quil.webp';
 
 const UncleQuil = () => (
-  <div class="uncle-quil__container">
+  <div class="flex w-2/4 justify-center mb-16 mx-auto md:mx-[5%]">
     <img
-      class="uncle-quil__image"
+      class=""
       src={quil}
       title="Uncle Quil"
       alt="Biggest cutie in this world!"

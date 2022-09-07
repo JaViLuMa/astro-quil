@@ -1,4 +1,5 @@
 import directionChange from '@utils/directionChange';
+import justifyOrAlign from '@utils/justifyOrAlign';
 import trimExtraSpaces from '@utils/trimExtraSpaces';
 import { children } from 'solid-js';
 
@@ -7,9 +8,13 @@ const Container = (props: ContainerProps) => {
 
   return (
     <div
-      class={trimExtraSpaces(`flex justify-center ${
-        props.maxWidth ? `${props.maxWidth}` : `max-w-full`
-      } ${props.margin ? `${props.margin}` : `my-0 mx-auto`}
+      class={trimExtraSpaces(`flex ${
+        props.changeDirection
+          ? `${justifyOrAlign(props.flexDirection)}`
+          : 'justify-center'
+      } ${props.maxWidth ? `${props.maxWidth}` : `max-w-full`} ${
+        props.margin ? `${props.margin}` : `my-0 mx-auto`
+      }
         ${props.width ? `${props.width}` : `w-auto`}
         ${
           props.changeDirection
