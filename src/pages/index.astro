@@ -5,17 +5,15 @@ import { Container, HeroTitle, SiteSections, SocialMedias, UncleQuil }  from '@c
 
 <IndexLayout title="Welcome to Astro.">
 	<HeroTitle />
-
+	<!-- <SiteSections /> -->
 	<Container
-		flexDirection="row"
-		maxWidth={64}
+		flexDirection="md:flex-row"
+		maxWidth="max-w-[64rem]"
 		changeDirection
-		breakpoint={768}
-		client:load
 	>
 		<UncleQuil />
 
-		<Container flexDirection="column" width={32} margin="0 5%">
+		<Container flexDirection="flex-col" width="w-[32rem]" margin="my-0 mx-[5%]">
 			<SiteSections />
 			<SocialMedias />
 		</Container>

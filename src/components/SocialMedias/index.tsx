@@ -1,4 +1,3 @@
-import '@styles/socialMedias.css';
 import supabaseData from '@utils/supabaseData';
 import { For, Show } from 'solid-js';
 
@@ -7,7 +6,7 @@ import SocialMediaIcon from '../SocialMediaIcon';
 const data = await supabaseData<Array<ISocialMedias>>('SocialMedias', '*');
 
 const SocialMedias = () => (
-  <div class="social-medias__container">
+  <div class="flex justify-evenly h-12">
     <For each={data} fallback={[]}>
       {(socialMedia) => (
         <Show when={socialMedia.ShowSocialMedia} fallback={null}>

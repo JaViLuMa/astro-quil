@@ -1,27 +1,22 @@
-import useWindowSize from '@hooks/useWindowSize';
 import directionChange from '@utils/directionChange';
+import trimExtraSpaces from '@utils/trimExtraSpaces';
 import { children } from 'solid-js';
 
 const Container = (props: ContainerProps) => {
   const c = children(() => props.children);
 
-  const size = useWindowSize();
-
   return (
     <div
-      style={{
-        display: 'flex',
-        'justify-content': 'center',
-        margin: `${props.margin || '0 auto'}`,
-        'max-width': `${props.maxWidth ? `${props.maxWidth}rem` : '100%'}`,
-        'flex-direction': `${directionChange(
-          props.changeDirection,
-          props.flexDirection,
-          size().width,
-          props.breakpoint
-        )}`,
-        width: `${props.width ? `${props.width}rem` : 'auto'}`,
-      }}
+      class={trimExtraSpaces(`flex justify-center ${
+        props.maxWidth ? `${props.maxWidth}` : `max-w-full`
+      } ${props.margin ? `${props.margin}` : `my-0 mx-auto`}
+        ${props.width ? `${props.width}` : `w-auto`}
+        ${
+          props.changeDirection
+            ? `${directionChange(props.flexDirection)} ${props.flexDirection}`
+            : `${props.flexDirection || ''}`
+        }
+      `)}
     >
       {c()}
     </div>

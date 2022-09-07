@@ -26,9 +26,9 @@ interface ISocialMedias {
 
 type Container = {
   children: import('solid-js').JSXElement;
-  maxWidth?: number;
-  margin?: string | number;
-  width?: number;
+  maxWidth?: string;
+  margin?: string;
+  width?: string;
   changeDirection?: boolean;
 };
 
@@ -36,13 +36,11 @@ type ContainerProps = Container &
   (
     | {
         changeDirection: boolean;
-        breakpoint: number;
-        flexDirection: 'row' | 'column';
+        flexDirection: `${'sm' | 'md' | 'lg' | 'xl' | '2xl'}:${string}`;
       }
     | {
         changeDirection?: false;
-        breakpoint?: never;
-        flexDirection?: 'row' | 'column';
+        flexDirection?: 'flex-row' | 'flex-col';
       }
   );
 
