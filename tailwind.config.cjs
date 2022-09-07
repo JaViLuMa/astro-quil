@@ -20,6 +20,15 @@ module.exports = {
         'site-sections':
           '-0.7px -0.7px 0 #cc8d35, 0.5px -0.5px 0 #ffffff, -0.5px 0.5px 0 #ffffff, 0.5px 0.5px 0 #cc8d35',
       },
+      keyframes: {
+        sway: {
+          '0%, 100%': { transform: 'rotate(-2.5deg)' },
+          '50%': { transform: 'rotate(5deg)' },
+        },
+      },
+      animation: {
+        sway: 'sway 5s ease-in-out infinite',
+      },
     },
     screens: {
       xxs: '360px',

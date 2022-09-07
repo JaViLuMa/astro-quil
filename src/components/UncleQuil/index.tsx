@@ -5,7 +5,7 @@ import quil from '/quil.webp';
 const UncleQuil = () => (
   <div class="flex w-2/4 justify-center mb-16 mx-auto md:mx-[5%]">
     <img
-      class=""
+      class="animate-sway"
       src={quil}
       title="Uncle Quil"
       alt="Biggest cutie in this world!"
