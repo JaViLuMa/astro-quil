@@ -6,7 +6,7 @@ import sparkRight from '/sparkle-right.webp';
 
 const data = await supabaseData<IHeroTitle>('HeroTitle', 'Title');
 
-const HeroTitle = () => (
+const HeroHeader = () => (
   <div class="flex justify-center items-center mb-16">
     <HeroImage src={sparkLeft} title="Left Spark" />
     <h1 class="font-bold text-center text-3xl mt-8 xxs:text-4xl xs:text-5xl sm:text-6xl md:text-7xl">
@@ -16,4 +16,4 @@ const HeroTitle = () => (
   </div>
 );
 
-export default HeroTitle;
+export default HeroHeader;

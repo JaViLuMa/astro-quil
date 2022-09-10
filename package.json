@@ -10,11 +10,13 @@
     "astro": "astro"
   },
   "devDependencies": {
+    "@astrojs/sitemap": "^1.0.0",
     "@astrojs/solid-js": "^1.0.0",
     "@astrojs/tailwind": "^1.0.0",
     "@supabase/supabase-js": "^2.0.0-rc.8",
     "@trivago/prettier-plugin-sort-imports": "^3.3.0",
     "astro": "^1.0.6",
+    "astro-compress": "^1.0.7",
     "astro-critters": "^1.0.2",
     "astro-fonts-next": "^1.0.5",
     "prettier": "^2.7.1",

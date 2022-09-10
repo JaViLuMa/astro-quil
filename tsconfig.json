@@ -34,12 +34,10 @@
     "jsxImportSource": "solid-js",
     "baseUrl": "./",
     "paths": {
-      "@styles/*": ["src/styles/*"],
       "@utils/*": ["src/utils/*"],
       "@constants/*": ["src/constants/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@components": ["src/components/index"],
-      "@hooks/*": ["src/hooks/*"]
+      "@components": ["src/components/index"]
     }
   }
 }

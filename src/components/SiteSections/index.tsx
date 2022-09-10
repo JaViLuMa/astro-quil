@@ -1,5 +1,4 @@
 import siteSections from '@constants/siteSections';
-import '@styles/siteSections.css';
 import trimExtraSpaces from '@utils/trimExtraSpaces';
 import { For, Show } from 'solid-js';
 
@@ -17,7 +16,7 @@ const SiteSections = () => (
         <Show when={section.showSection} fallback={null}>
           <a
             class={trimExtraSpaces(`
-              text-4xl duration-300 no-underline mb-7 text-azureish-white
+              text-4xl duration-300 no-underline mb-7 text-azureish-white text-center
               hover:text-shadow-site-sections
               after:block after:border-solid after:border-b-2 after:border-b-peru
               after:scale-x-0 after:text-transform-site-sections

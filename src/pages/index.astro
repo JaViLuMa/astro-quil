@@ -1,24 +1,19 @@
 ---
 import IndexLayout from '@layouts/IndexLayout.astro';
-import { Container, HeroTitle, SiteSections, SocialMedias, UncleQuil }  from '@components';
+import { HeroHeader, SiteSections, SocialMedias, UncleQuil }  from '@components';
 ---
 
 <IndexLayout title="Welcome to Astro.">
-	<HeroTitle />
+	<HeroHeader />
 
-	<Container
-		flexDirection="md:flex-row"
-		maxWidth="max-w-[64rem]"
-		changeDirection
-		margin="mx-[10%] md:mx-auto"
-	>
+	<div class="flex flex-col max-w-[64rem] mx-[10%] w-auto justify-center md:mx-auto md:flex-row">
 		<UncleQuil />
 
-		<Container flexDirection="flex-col" width="w-[32rem]" margin="my-0 mx-auto md:my-0 md:mx-[5%]">
+		<div class="flex flex-col justify-center max-w-full w-[32rem] mx-auto md:mx-[5%]">
 			<SiteSections />
 
 			<SocialMedias />
-		</Container>
-	</Container>
+		</div>
+	</div>
 </IndexLayout>
  
